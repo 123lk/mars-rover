@@ -9,7 +9,7 @@ class Rover {
     this.errors = [];
   }
 
-  followDirections (directions, plateauHeight, plateauWidth) {
+  followDirections (directions) {
 
     const directionsArray = directions.split('');
 
@@ -22,7 +22,7 @@ class Rover {
           this.turnRight();
           break;
         case 'M':
-          this.move(plateauHeight, plateauWidth);
+          this.move();
           break;
         default:
           this.errors.push({source: 'followDirections', message: 'invalid instruction'});
@@ -45,7 +45,7 @@ class Rover {
         this.orientation = 'S';
         break;
       default:
-        this.errors.push({source: 'turnLeft', message: 'invalid orientation'});
+        this.errors.push({source: 'turnLeft', message: 'invalid input'});
     }
   }
 
@@ -64,7 +64,7 @@ class Rover {
         this.orientation = 'N';
         break;
       default:
-        this.errors.push({source: 'turnRight', message: 'invalid orientation'});
+        this.errors.push({source: 'turnRight', message: 'invalid input'});
     }
   }
 
