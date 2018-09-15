@@ -1,4 +1,4 @@
-const Plateau = require('./main.js');
+const Plateau = require('../src/Plateau.js');
 const expect = require('chai').expect;
 
 describe('Plateau', function () {
