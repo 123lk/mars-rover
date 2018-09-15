@@ -1,5 +1,5 @@
 class Rover {
-  constructor (currentPosition) {
+  constructor (currentPosition = '0 0 N') {
 
     const currentPositionArray = currentPosition.split(' ');
 
@@ -9,7 +9,7 @@ class Rover {
     this.errors = [];
   }
 
-  followDirections (directions) {
+  followDirections (directions, plateauHeight, plateauWidth) {
 
     const directionsArray = directions.split('');
 
@@ -22,10 +22,10 @@ class Rover {
           this.turnRight();
           break;
         case 'M':
-          this.move();
+          this.move(plateauHeight, plateauWidth);
           break;
         default:
-          this.errors.push('invalid instruction');
+          this.errors.push({source: 'followDirections', message: 'invalid instruction'});
       }
     });
   }
@@ -45,7 +45,7 @@ class Rover {
         this.orientation = 'S';
         break;
       default:
-        this.errors.push('invalid orientation');
+        this.errors.push({source: 'turnLeft', message: 'invalid orientation'});
     }
   }
 
@@ -64,31 +64,31 @@ class Rover {
         this.orientation = 'N';
         break;
       default:
-        this.errors.push('invalid orientation');
+        this.errors.push({source: 'turnRight', message: 'invalid orientation'});
     }
   }
 
   move () {
     switch (this.orientation) {
       case 'N':
-        this.yPosition++;
+          this.yPosition++;
         break;
       case 'E':
-        this.xPosition++;
+          this.xPosition++;
         break;
       case 'S':
-        this.yPosition--;
+          this.yPosition--;
         break;
       case 'W':
         this.xPosition--;
         break;
       default:
-        this.errors.push('unable to calculate');
+        this.errors.push({source: 'move', message: 'invalid input'});
     }
   }
 
-  getfinalPosition () {
-    console.log(`${this.xPosition} ${this.yPosition} ${this.orientation}`);
+  getFinalPosition () {
+    return `${this.xPosition} ${this.yPosition} ${this.orientation}`;
   }
   
 
