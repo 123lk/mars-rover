@@ -1,8 +1,11 @@
 # Mars Rover
 
 ## Design and assumptions
-I created 2 classes, Plataeu and Rover.  As the first line of input provided was 5, 5 I presumed that the plateau has the potential to be various sizes and so set the height and width based on the input.  I decided to put methods for interpreting each instruction on the Rover class as these are specific to each rover.
-The brief outlined that each rover will be 'finished sequentially' so in order for this to occur I decided to store the rovers in an array in the Plateau class and only send directions once the previous rover has stopped moving. 
+I created 2 classes, Plataeu and Rover.  I decided to put methods for interpreting each instruction on the Rover class as these are specific to each rover.  The brief outlined that each rover will be 'finished sequentially' so in order for this to occur I decided to store the rovers in an array in the Plateau class and only send directions once the previous rover has stopped moving. 
+
+As the first line of input provided was 5, 5 I assumed that the plateau has the potential to be various sizes and so set the height and width based on the input.
+
+The brief outlines that the position instruction is 'two integers and a letter separated by spaces' so I assumed this would be in the form of a string.
 
 ## Installation 
 You will need to have Node.js installed to run this application.  Type the below command into the terminal to check if you already have node installed;
