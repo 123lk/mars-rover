@@ -1,7 +1,7 @@
 # Mars Rover
 
 ## Design and assumptions
-I created 2 classes, Plataeu and Rover.  I decided to put methods for interpreting each instruction on the Rover class as these are specific to each rover.  The brief outlined that each rover will be 'finished sequentially' so in order for this to occur I decided to store the rovers in an array in the Plateau class and only send directions once the previous rover has stopped moving. 
+I created 2 classes, Plataeu and Rover.  I decided to put methods for interpreting each instruction on the Rover class as these are specific to each rover.  The brief outlined that each rover will be 'finished sequentially' so in order for this to occur I decided to store the rovers in an array in the Plateau class and only send directions once the final position of the previous rover has been received. 
 
 As the first line of input provided was 5, 5 I assumed that the plateau has the potential to be various sizes and so set the height and width based on the input.
 
