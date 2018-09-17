@@ -22,7 +22,7 @@ $npm install
 ## How to run the application
 In order to run the application with the supplied test input (5 5, 1 2 N, LMLMLMLMM, 3 3 E, MMRMMRMRRM) and view the output please enter the following command;
 ```
-$npm run
+$npm start
 ```
 
 ## Testing
