@@ -12,7 +12,7 @@ You will need to have Node.js installed to run this application.  Type the below
 ```
 $node -v
 ```
-If you already have node installed it will tell you which version (e.g. v8.4.0).  If you need to install node.js please follow this [link](https://nodejs.org/en/).
+If you already have node installed it will tell you which version (e.g. v8.4.0).  If you need to install Node.js please follow this [link](https://nodejs.org/en/).
 
 To install all the dependencies please enter the following command into the terminal once you have navigated into the root directory; 
 ```
